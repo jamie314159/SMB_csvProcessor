@@ -1,3 +1,4 @@
+import os
 import csv
 import tkinter as tk
 from tkinter import filedialog
@@ -26,3 +27,6 @@ if csvfliename and newcsvfilename:
 		[newrow.append(x) for x in row[1:]]
 		csvwriter.writerow(newrow)
 
+	csvfile.close()
+	newcsvfile.close()
+	os.startfile(newcsvfilename.replace('/','\\'))
