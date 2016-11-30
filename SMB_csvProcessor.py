@@ -13,7 +13,7 @@ if csvfliename and newcsvfilename:
 	csvreader = csv.reader(csvfile)
 	newcsvfile = open(newcsvfilename, 'w',  newline='')
 	csvwriter = csv.writer(newcsvfile, quoting=csv.QUOTE_MINIMAL)
-	csvheader = ["LastName", "FirstName", "MiddleInitial"]
+	csvheader = ["Last Name", "First Name", "Middle Initial"]
 	for x in csvreader.__next__()[1:]:
 		csvheader.append(x)
 	csvwriter.writerow(csvheader)
